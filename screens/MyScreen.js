@@ -6,6 +6,7 @@ import {
   Text,
   ActivityIndicator,
   Button,
+  Image
 } from 'react-native';
 
 const Title = ({ children }) => <Text style={styles.title}>{children}</Text>;
@@ -13,8 +14,10 @@ const Title = ({ children }) => <Text style={styles.title}>{children}</Text>;
 export default class MyScreen extends React.Component {
   render() {
     const navigationView = (
-      <View style={{flex: 1, backgroundColor: '#fff'}}>
-        <Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}>I'm in the Drawer!</Text>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <Text style={{ margin: 10, fontSize: 15, textAlign: 'left' }}>
+          I'm in the Drawer!
+        </Text>
       </View>
     );
 
@@ -42,7 +45,17 @@ export default class MyScreen extends React.Component {
           />
         </View>
 
-        <Title>DrawerLayoutAndroid</Title>
+        <Title>Image</Title>
+        <Image
+          source={{
+            uri:
+              'https://facebook.github.io/react-native/docs/assets/favicon.png'
+          }}
+          style={{
+            width: 80,
+            height: 80
+          }}
+        />
       </ScrollView>
     );
   }
